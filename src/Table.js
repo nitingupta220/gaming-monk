@@ -171,7 +171,7 @@ const styles = theme => ({
   }
 });
 
-class CustomPaginationActionsTable extends React.Component {
+class DataTable extends React.Component {
   state = {
     users: [],
     page: 0,
@@ -220,7 +220,7 @@ class CustomPaginationActionsTable extends React.Component {
       open: true,
       selectedValueAvatar: row.avatar,
       selectedValueEmail: row.email,
-      selectedValueUserName: row.first_name + row.last_name
+      selectedValueUserName: row.first_name + " " + row.last_name
     });
   };
 
@@ -237,7 +237,7 @@ class CustomPaginationActionsTable extends React.Component {
       <Paper className={classes.root}>
         <div className={classes.tableWrapper}>
           <div>
-            <h1 style={{ margin: 0 }}>Users</h1>
+            <h1 style={{ margin: 0 }}>Users DataTable</h1>
             <input
               style={{
                 padding: 5,
@@ -317,4 +317,4 @@ class CustomPaginationActionsTable extends React.Component {
   }
 }
 
-export default withStyles(styles)(CustomPaginationActionsTable);
+export default withStyles(styles)(DataTable);
